@@ -1,0 +1,121 @@
+<section class="hero">
+  <div class="curtain" aria-hidden="true"></div>
+  <div class="shaft" aria-hidden="true"></div>
+  <div class="floor" aria-hidden="true"></div>
+
+  <div class="wrap hero-copy">
+    <h1 class="display">
+      <span class="ln"><span style="--d:.15s">Everything the day needs,</span></span>
+      <span class="ln"><span style="--d:.3s">delivered and collected.</span></span>
+    </h1>
+    <p class="sub">Tents, seating, sound and lighting for your event. Book online, pay once, and get your deposit back.</p>
+    <div class="cta">
+      <a routerLink="/catalogue" class="btn btn-light">Browse the catalogue</a>
+      <a href="#how" class="btn btn-ghost-light">How it works</a>
+    </div>
+  </div>
+
+  <div class="chair-wrap"><svg class="chair" viewBox="0 0 420 330" aria-hidden="true">
+    <ellipse cx="215" cy="318" rx="170" ry="9" fill="#000" opacity=".5"/>
+    <g transform="rotate(-6 150 190)">
+      <path d="M120 70 Q96 70 96 96 L110 250 L150 250 L150 96 Q150 70 126 70Z" fill="#6A4A2E"/>
+      <rect x="128" y="84" width="70" height="150" rx="14" fill="#EBE4D2"/>
+      <rect x="140" y="110" width="52" height="68" rx="12" fill="#C9B26F"/>
+    </g>
+    <rect x="112" y="244" width="228" height="38" rx="10" fill="#EBE4D2"/>
+    <path d="M112 282 H340" stroke="#6A4A2E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M118 196 H330" stroke="#6A4A2E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M318 196 V282" stroke="#6A4A2E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M126 282 L98 318" stroke="#6A4A2E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M326 282 L346 318" stroke="#6A4A2E" stroke-width="12" stroke-linecap="round"/>
+  </svg></div>
+
+  <div class="wrap stats">
+    <div><strong [appCountUp]="items().length" [delay]="900 + startDelay">0</strong><span>Items to rent</span></div>
+    <div><strong [appCountUp]="units()" [delay]="1050 + startDelay">0</strong><span>Units in stock</span></div>
+    <div><strong [appCountUp]="categories().length" [delay]="1200 + startDelay">0</strong><span>Categories</span></div>
+  </div>
+</section>
+
+@if (offline()) {
+  <div class="wrap"><p class="notice" style="margin-top:32px">The server is not reachable, so sample items are shown. Start the backend on port 8080 to see live stock and prices.</p></div>
+}
+
+<section class="intro wrap" id="how">
+  <div class="intro-top">
+    <p class="small">Why RentalHub</p>
+    <p class="small right">Plan the event. We handle the equipment.</p>
+  </div>
+  <h2 class="title big" appSplit>Plan the day,<br>not the logistics.</h2>
+  <div class="cols">
+    <p class="rv l" appReveal>Event equipment is usually arranged over phone calls, with prices that change and deposits nobody tracks. RentalHub puts the whole booking in one place: what is available, what it costs and what you get back.</p>
+    <p class="rv r" appReveal>Every quote shows the rent and the deposit separately. If anything is deducted for damage when the equipment returns, you see the amount and the reason.</p>
+  </div>
+
+  <ol class="steps">
+    @for (s of steps; track s.n) {
+      <li class="rv l" appReveal [style.--i]="$index">
+        <span class="n">{{ s.n }}</span>
+        <h3 class="h3">{{ s.t }}</h3>
+        <p>{{ s.d }}</p>
+      </li>
+    }
+  </ol>
+</section>
+
+<section class="cats">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="title" appSplit>Shop by category</h2>
+      <a routerLink="/catalogue" class="link">See everything</a>
+    </div>
+    <div class="cat-grid">
+      @for (c of categories(); track c.name; let i = $index) {
+        <a [routerLink]="['/catalogue']" [queryParams]="{ category: c.name }" class="cat rv r" appReveal [style.--i]="i">
+          <div class="art"><app-glyph [name]="c.sample.name" [category]="c.name" /><span class="peek">Browse</span></div>
+          <div class="meta"><strong>{{ c.name }}</strong><span>{{ c.count }} {{ c.count === 1 ? 'item' : 'items' }}</span></div>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="feat wrap">
+  <div class="head">
+    <h2 class="title" appSplit>Popular right now</h2>
+    <a routerLink="/catalogue" class="link">See everything</a>
+  </div>
+  <div class="slider" #track (scroll)="onSlide()">
+    @for (e of featured(); track e.id) {
+      <a [routerLink]="['/catalogue', e.id]" class="card slide">
+        <div class="art"><app-glyph [name]="e.name" [category]="e.category" /><span class="peek">Reserve</span></div>
+        <h3 class="h3">{{ e.name }}</h3>
+        <p class="small">{{ e.description }}</p>
+        <div class="price"><b class="num">{{ rupees(e.pricePerDay) }}</b> <span>per day</span></div>
+      </a>
+    }
+  </div>
+  <div class="ctl">
+    <button class="arrow" (click)="slide(-1)" aria-label="Previous items">‹</button>
+    <div class="track-bar"><i [style.width.%]="progress()"></i></div>
+    <button class="arrow" (click)="slide(1)" aria-label="Next items">›</button>
+  </div>
+</section>
+
+<section class="deposit">
+  <div class="wrap dep-grid">
+    <div class="rv l" appReveal>
+      <h2 class="title" appSplit>Your deposit comes back.</h2>
+      <p class="lede">When the equipment is returned, every rupee that is not deducted for damage goes back to you. A deduction always comes with a written reason.</p>
+      <a routerLink="/catalogue" class="btn btn-light" style="margin-top:28px">Start a booking</a>
+    </div>
+    <div class="ex rv r" appReveal>
+      <p class="small">Example: a ₹20 deposit</p>
+      <div class="bar"><i class="back"></i><i class="cut"></i></div>
+      <div class="legend">
+        <div><b class="num">₹15</b><span>Refunded to you</span></div>
+        <div><b class="num">₹5</b><span>Deducted: two chairs cracked</span></div>
+      </div>
+    </div>
+  </div>
+</section>

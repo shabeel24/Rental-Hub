@@ -1,0 +1,298 @@
+2026-10-18 13:11:10.795 INFO  [system] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-18 13:11:10.907 INFO  [system] com.RentalHub.RentalHubApplication - Starting RentalHubApplication using Java 17.0.12 with PID 7340 (D:\PROJECTS\RENTALHUB BACKEND\RentalHub\target\classes started by muham in D:\PROJECTS\RENTALHUB BACKEND\RentalHub)
+2026-10-18 13:11:10.909 INFO  [system] com.RentalHub.RentalHubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-18 13:11:11.052 INFO  [system] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-18 13:11:11.052 INFO  [system] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-18 13:11:12.831 INFO  [system] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-18 13:11:12.997 INFO  [system] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 4 JPA repository interfaces.
+2026-10-18 13:11:14.513 INFO  [system] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-18 13:11:14.543 INFO  [system] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-18 13:11:14.550 INFO  [system] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-18 13:11:14.550 INFO  [system] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-18 13:11:14.721 INFO  [system] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3666 ms
+2026-10-18 13:11:15.074 INFO  [system] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-18 13:11:15.273 INFO  [system] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-18 13:11:16.361 INFO  [system] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-18 13:11:16.427 INFO  [system] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-18 13:11:16.736 INFO  [system] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fed8ffa
+2026-10-18 13:11:16.740 INFO  [system] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-18 13:11:16.896 INFO  [system] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/rentalhub?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: rentalhub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-18 13:11:18.482 INFO  [system] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-18 13:11:18.594 INFO  [system] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-18 13:11:18.758 INFO  [system] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-18 13:11:21.569 INFO  [system] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-10-18 13:11:21.570 WARN  [system] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-10-18 13:11:22.791 INFO  [system] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-18 13:11:22.840 INFO  [system] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-18 13:11:22.852 INFO  [system] com.RentalHub.RentalHubApplication - Started RentalHubApplication in 13.305 seconds (process running for 15.499)
+2026-10-18 13:11:30.284 INFO  [system] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-18 13:11:30.284 INFO  [system] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-18 13:11:30.291 INFO  [system] o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-10-18 13:11:30.857 INFO  [e8c8a060] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (557 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:45.752 INFO  [87b17214] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/register -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:45.977 INFO  [1c4c48be] com.RentalHub.Service.AuthService - AUDIT user registered email=muhammedshabeelk11@gmail.com role=CUSTOMER enabled=true
+2026-10-18 13:11:45.990 INFO  [1c4c48be] c.R.logging.RequestLoggingFilter - POST /api/auth/register -> 201 (235 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:46.004 INFO  [120ab3ef] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:46.274 INFO  [76cdaac4] com.RentalHub.Service.AuthService - AUDIT login success email=muhammedshabeelk11@gmail.com role=CUSTOMER
+2026-10-18 13:11:46.290 INFO  [76cdaac4] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 200 (286 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:46.385 INFO  [459e0bfa] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:46.484 INFO  [3c194f96] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (84 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:55.850 INFO  [678640ba] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment/5 -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:11:55.902 INFO  [5741b376] c.R.logging.RequestLoggingFilter - GET /api/equipment/5 -> 200 (45 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:05.400 INFO  [0dcd18da] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:05.466 INFO  [29fa9081] c.RentalHub.Service.BookingService - AUDIT booking created id=1 item=LED Par Light qty=1 days=1 total=350.00 by=muhammedshabeelk11@gmail.com
+2026-10-18 13:12:05.491 INFO  [29fa9081] c.R.logging.RequestLoggingFilter - POST /api/bookings -> 201 (91 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:05.557 INFO  [0aa6e96b] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings/1 -> 200 (3 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:05.622 INFO  [b1dd1816] c.R.logging.RequestLoggingFilter - GET /api/bookings/1 -> 200 (54 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:06.781 INFO  [18597059] c.R.logging.RequestLoggingFilter - OPTIONS /api/payments/booking/1/initiate -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:06.802 INFO  [177f80dc] c.R.Payment.MockPaymentGateway - MOCK gateway order created id=order_5342e31c32d64e amount=350.00 receipt=booking-1
+2026-10-18 13:12:06.804 INFO  [177f80dc] c.RentalHub.Service.PaymentService - AUDIT payment initiated booking=1 order=order_5342e31c32d64e amount=350.00 by=muhammedshabeelk11@gmail.com
+2026-10-18 13:12:06.812 INFO  [177f80dc] c.R.logging.RequestLoggingFilter - POST /api/payments/booking/1/initiate -> 200 (27 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:07.725 INFO  [d61af30f] c.R.logging.RequestLoggingFilter - OPTIONS /api/payments/verify -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:07.741 INFO  [e146cf1a] c.RentalHub.Service.PaymentService - AUDIT payment PAID booking=1 payment=pay_avynxbztxn amount=350.00 by=muhammedshabeelk11@gmail.com
+2026-10-18 13:12:07.757 INFO  [e146cf1a] c.R.logging.RequestLoggingFilter - POST /api/payments/verify -> 200 (32 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:11.360 INFO  [4374b10c] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:11.446 INFO  [fa8d1ffc] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (82 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:19.772 INFO  [b46cff59] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:19.797 INFO  [f52384ab] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (19 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:21.498 INFO  [fe427b77] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:21.551 INFO  [d7aa0474] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (40 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:28.188 INFO  [9e8bd9cb] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings/1/cancel -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:28.203 INFO  [cf0bf524] c.R.Payment.MockPaymentGateway - MOCK gateway refund id=rfnd_becbb0e9f6084b paymentId=pay_avynxbztxn amount=350.00
+2026-10-18 13:12:28.204 INFO  [cf0bf524] c.RentalHub.Service.PaymentService - AUDIT payment REFUNDED booking=1 amount=350.00
+2026-10-18 13:12:28.204 INFO  [cf0bf524] c.RentalHub.Service.BookingService - AUDIT booking cancelled id=1 by=muhammedshabeelk11@gmail.com
+2026-10-18 13:12:28.214 INFO  [cf0bf524] c.R.logging.RequestLoggingFilter - POST /api/bookings/1/cancel -> 200 (21 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:28.219 INFO  [02ea22b8] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:28.234 INFO  [faa54b1c] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (12 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:29.889 INFO  [719dd6e2] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:29.920 INFO  [b77e956f] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (25 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:31.502 INFO  [489d280f] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (32 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:32.230 INFO  [aa4d382e] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (42 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:12:33.854 INFO  [04132d33] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (18 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:32:49.448 INFO  [7c17fd38] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:32:49.484 INFO  [1f4288db] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (27 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:32:52.549 INFO  [d442f929] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:32:52.586 INFO  [9d50cb88] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (32 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:32:55.653 INFO  [301ece19] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (12 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:33:14.034 INFO  [ade97e18] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/register -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 13:33:14.104 INFO  [766dcc0e] com.RentalHub.Service.AuthService - AUDIT user registered email=muhammedshabeelk@gmail.com role=VENDOR enabled=false
+2026-10-18 13:33:14.104 INFO  [766dcc0e] c.R.logging.RequestLoggingFilter - POST /api/auth/register -> 201 (68 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 14:00:01.874 INFO  [9999a293] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (16 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 14:08:48.979 INFO  [769b255a] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (34 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:30:28.031 INFO  [system] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-18 18:30:28.253 INFO  [system] com.RentalHub.RentalHubApplication - Starting RentalHubApplication using Java 17.0.12 with PID 5556 (D:\PROJECTS\RENTALHUB BACKEND\RentalHub\target\classes started by muham in D:\PROJECTS\RENTALHUB BACKEND\RentalHub)
+2026-10-18 18:30:28.257 INFO  [system] com.RentalHub.RentalHubApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-18 18:30:28.522 INFO  [system] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-18 18:30:28.522 INFO  [system] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-18 18:30:32.012 INFO  [system] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-18 18:30:32.190 INFO  [system] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 4 JPA repository interfaces.
+2026-10-18 18:30:35.550 INFO  [system] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-18 18:30:35.621 INFO  [system] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-18 18:30:35.644 INFO  [system] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-18 18:30:35.646 INFO  [system] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-18 18:30:36.138 INFO  [system] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 7614 ms
+2026-10-18 18:30:36.873 INFO  [system] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-18 18:30:37.466 INFO  [system] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-18 18:30:39.545 INFO  [system] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-18 18:30:39.665 INFO  [system] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-18 18:30:40.280 INFO  [system] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ad9c283
+2026-10-18 18:30:40.290 INFO  [system] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-18 18:30:40.571 INFO  [system] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/rentalhub?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: rentalhub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-18 18:30:44.699 INFO  [system] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-18 18:30:44.991 INFO  [system] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-18 18:30:45.480 INFO  [system] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-18 18:30:49.876 INFO  [system] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-10-18 18:30:49.878 WARN  [system] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-10-18 18:30:51.763 INFO  [system] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-18 18:30:51.836 INFO  [system] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-18 18:30:51.863 INFO  [system] com.RentalHub.RentalHubApplication - Started RentalHubApplication in 26.441 seconds (process running for 30.798)
+2026-10-18 18:33:12.174 INFO  [system] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-18 18:33:12.176 INFO  [system] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-18 18:33:12.182 INFO  [system] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2026-10-18 18:33:12.979 WARN  [9acf2be0] c.R.exception.GlobalExceptionHandler - Validation failed: {role=must not be null, fullName=must not be blank}
+2026-10-18 18:33:13.149 WARN  [9acf2be0] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.String>> com.RentalHub.controller.AuthController.register(com.RentalHub.dto.RegisterRequest) with 2 errors: [Field error in object 'registerRequest' on field 'fullName': rejected value [null]; codes [NotBlank.registerRequest.fullName,NotBlank.fullName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.fullName,fullName]; arguments []; default message [fullName]]; default message [must not be blank]] [Field error in object 'registerRequest' on field 'role': rejected value [null]; codes [NotNull.registerRequest.role,NotNull.role,NotNull.com.RentalHub.Model.Role,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.role,role]; arguments []; default message [role]]; default message [must not be null]] ]
+2026-10-18 18:33:13.161 WARN  [9acf2be0] c.R.logging.RequestLoggingFilter - POST /api/auth/register -> 400 (962 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:34:11.795 WARN  [06f9fd2e] com.RentalHub.Service.AuthService - AUDIT login failed email=shabeel@gmail.com reason=BadCredentialsException
+2026-10-18 18:34:11.802 WARN  [06f9fd2e] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:34:11.804 WARN  [06f9fd2e] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (484 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:34:21.547 WARN  [886d7f4e] com.RentalHub.Service.AuthService - AUDIT login failed email=shabeel@gmail.com reason=BadCredentialsException
+2026-10-18 18:34:21.554 WARN  [886d7f4e] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:34:21.555 WARN  [886d7f4e] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (192 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:34:24.674 WARN  [62d693a4] com.RentalHub.Service.AuthService - AUDIT login failed email=shabeel@gmail.com reason=BadCredentialsException
+2026-10-18 18:34:24.678 WARN  [62d693a4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:34:24.680 WARN  [62d693a4] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (176 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:34:31.689 WARN  [f42a7e33] com.RentalHub.Service.AuthService - AUDIT login failed email=shabeel@gmail.com reason=BadCredentialsException
+2026-10-18 18:34:31.695 WARN  [f42a7e33] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:34:31.696 WARN  [f42a7e33] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (175 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:35:09.694 WARN  [a49fa07e] com.RentalHub.Service.AuthService - AUDIT login failed email=shabeel@gmail.com reason=BadCredentialsException
+2026-10-18 18:35:09.694 WARN  [a49fa07e] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:35:09.694 WARN  [a49fa07e] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (183 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:36:43.056 INFO  [fbbd915a] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (197 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:36:49.173 INFO  [06ed2319] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (21 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:22.245 INFO  [2dc6701a] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:22.730 INFO  [ffaf89d2] com.RentalHub.Service.AuthService - AUDIT login success email=admin@rentalhub.com role=ADMIN
+2026-10-18 18:37:22.735 INFO  [ffaf89d2] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 200 (484 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:22.998 INFO  [8d2cb0d2] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/equipment -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:23.014 INFO  [8ff89042] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/bookings -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:23.024 INFO  [1f3a49a6] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/users -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:23.609 INFO  [6fb09ba5] c.R.logging.RequestLoggingFilter - GET /api/admin/users -> 200 (471 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:23.615 INFO  [5fdaa8d9] c.R.logging.RequestLoggingFilter - GET /api/admin/equipment -> 200 (518 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:37:23.703 INFO  [ae5c05dd] c.R.logging.RequestLoggingFilter - GET /api/admin/bookings -> 200 (565 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:19.829 INFO  [a19f1fa9] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/equipment -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:20.037 INFO  [32ef8192] c.RentalHub.Service.EquipmentService - AUDIT equipment created id=6 name=The Party Round Arch Balloon Stand by=admin@rentalhub.com
+2026-10-18 18:41:20.066 INFO  [32ef8192] c.R.logging.RequestLoggingFilter - POST /api/admin/equipment -> 201 (231 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:20.082 INFO  [cf77dfa1] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/bookings -> 200 (3 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:20.082 INFO  [ba8eb2d1] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/users -> 200 (3 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:20.110 INFO  [838f1e75] c.R.logging.RequestLoggingFilter - GET /api/admin/equipment -> 200 (35 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:20.116 INFO  [c0cd96fa] c.R.logging.RequestLoggingFilter - GET /api/admin/users -> 200 (28 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:20.120 INFO  [4ddad3c6] c.R.logging.RequestLoggingFilter - GET /api/admin/bookings -> 200 (27 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:51.987 INFO  [5ffa8e65] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/vendors/4/approve -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:52.111 INFO  [6cc7d795] com.RentalHub.Service.UserService - AUDIT vendor approved id=4 email=muhammedshabeelk@gmail.com by=admin@rentalhub.com
+2026-10-18 18:41:52.122 INFO  [6cc7d795] c.R.logging.RequestLoggingFilter - PATCH /api/admin/vendors/4/approve -> 200 (127 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:52.140 INFO  [b4e29a68] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/equipment -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:52.144 INFO  [88b6f21c] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/bookings -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:52.150 INFO  [ed54b88e] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/users -> 200 (3 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:52.203 INFO  [da5e6ffd] c.R.logging.RequestLoggingFilter - GET /api/admin/users -> 200 (37 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:52.213 INFO  [668646fc] c.R.logging.RequestLoggingFilter - GET /api/admin/equipment -> 200 (52 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:41:52.227 INFO  [eae5de66] c.R.logging.RequestLoggingFilter - GET /api/admin/bookings -> 200 (62 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:04.563 INFO  [56b572a8] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (39 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:17.435 INFO  [1ef695bb] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:17.621 WARN  [95f74254] com.RentalHub.Service.AuthService - AUDIT login failed email=muhammedshabeelk@gmail.com reason=BadCredentialsException
+2026-10-18 18:42:17.623 WARN  [95f74254] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:42:17.625 WARN  [95f74254] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (186 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:24.487 INFO  [5bc80881] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:24.700 WARN  [cf2dec68] com.RentalHub.Service.AuthService - AUDIT login failed email=muhammedshabeelk@gmail.com reason=BadCredentialsException
+2026-10-18 18:42:24.702 WARN  [cf2dec68] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:42:24.705 WARN  [cf2dec68] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (218 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:33.293 INFO  [abc1a2ba] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:33.476 WARN  [49c84ebd] com.RentalHub.Service.AuthService - AUDIT login failed email=muhammedshabeelk@gmail.com reason=BadCredentialsException
+2026-10-18 18:42:33.476 WARN  [49c84ebd] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:42:33.476 WARN  [49c84ebd] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (179 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:38.948 INFO  [84f3e367] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:39.154 WARN  [e9392313] com.RentalHub.Service.AuthService - AUDIT login failed email=muhammedshabeelk@gmail.com reason=BadCredentialsException
+2026-10-18 18:42:39.154 WARN  [e9392313] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:42:39.154 WARN  [e9392313] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (201 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:45.124 INFO  [0dede02d] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:45.320 WARN  [a7197663] com.RentalHub.Service.AuthService - AUDIT login failed email=muhammedshabeelk@gmail.com reason=BadCredentialsException
+2026-10-18 18:42:45.328 WARN  [a7197663] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:42:45.330 WARN  [a7197663] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (199 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:57.069 INFO  [6abad991] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:42:57.342 WARN  [90f4b6e8] com.RentalHub.Service.AuthService - AUDIT login failed email=muhammedshabeelk@gmail.com reason=BadCredentialsException
+2026-10-18 18:42:57.342 WARN  [90f4b6e8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:42:57.350 WARN  [90f4b6e8] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (277 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:02.949 INFO  [0e6c4bd5] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/register -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:03.169 INFO  [0e9e01c5] com.RentalHub.Service.AuthService - AUDIT user registered email=rahul@gmail.com role=VENDOR enabled=false
+2026-10-18 18:44:03.172 INFO  [0e9e01c5] c.R.logging.RequestLoggingFilter - POST /api/auth/register -> 201 (214 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.459 INFO  [111cd189] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.649 INFO  [3ff0cf5e] com.RentalHub.Service.AuthService - AUDIT login success email=admin@rentalhub.com role=ADMIN
+2026-10-18 18:44:13.651 INFO  [3ff0cf5e] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 200 (192 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.737 INFO  [22964b60] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/equipment -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.747 INFO  [6ca26c80] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/bookings -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.756 INFO  [a2be8db8] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/users -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.852 INFO  [5fd4be8a] c.R.logging.RequestLoggingFilter - GET /api/admin/users -> 200 (67 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.858 INFO  [27e95322] c.R.logging.RequestLoggingFilter - GET /api/admin/equipment -> 200 (78 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:13.884 INFO  [3cdc1def] c.R.logging.RequestLoggingFilter - GET /api/admin/bookings -> 200 (100 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.774 INFO  [21eab65b] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/vendors/5/approve -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.850 INFO  [b117ec1d] com.RentalHub.Service.UserService - AUDIT vendor approved id=5 email=rahul@gmail.com by=admin@rentalhub.com
+2026-10-18 18:44:19.850 INFO  [b117ec1d] c.R.logging.RequestLoggingFilter - PATCH /api/admin/vendors/5/approve -> 200 (72 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.875 INFO  [d67cf1d5] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/equipment -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.882 INFO  [32a114f0] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/users -> 200 (6 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.884 INFO  [baea57df] c.R.logging.RequestLoggingFilter - OPTIONS /api/admin/bookings -> 200 (6 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.931 INFO  [d56cac7b] c.R.logging.RequestLoggingFilter - GET /api/admin/users -> 200 (34 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.933 INFO  [39260972] c.R.logging.RequestLoggingFilter - GET /api/admin/equipment -> 200 (45 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:19.941 INFO  [f8b1b4ef] c.R.logging.RequestLoggingFilter - GET /api/admin/bookings -> 200 (44 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:31.394 INFO  [0be09495] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:31.599 INFO  [7139ffa9] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (191 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:34.698 INFO  [24701686] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:34.793 INFO  [e3a9da77] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (60 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:51.194 INFO  [48b97578] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:44:51.248 INFO  [b01ff3bf] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (42 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:10.984 INFO  [9623634b] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:11.133 WARN  [1c037676] com.RentalHub.Service.AuthService - AUDIT login failed email=rahul@gmail.com reason=BadCredentialsException
+2026-10-18 18:45:11.138 WARN  [1c037676] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:45:11.138 WARN  [1c037676] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (150 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:17.825 INFO  [58f0fc71] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:18.060 WARN  [f1418723] com.RentalHub.Service.AuthService - AUDIT login failed email=rahul@gmail.com reason=BadCredentialsException
+2026-10-18 18:45:18.060 WARN  [f1418723] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-18 18:45:18.060 WARN  [f1418723] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 401 (234 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:20.028 INFO  [a0882bc4] com.RentalHub.Service.AuthService - AUDIT login success email=rahul@gmail.com role=VENDOR
+2026-10-18 18:45:20.042 INFO  [a0882bc4] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 200 (154 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:20.151 INFO  [d7c36f3e] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:20.239 INFO  [f95a37dd] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (48 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:42.920 INFO  [b1398f99] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:42.981 INFO  [772f4d06] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (33 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:46.058 INFO  [f63f72aa] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:46.117 INFO  [a8d206dd] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (36 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:47.259 INFO  [3c1edeb4] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (49 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:49.400 INFO  [789ac897] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:49.443 INFO  [dda64737] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (28 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:45:50.841 INFO  [b7ba1f57] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (56 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:46:21.194 INFO  [cd67dc07] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (77 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:51:39.261 INFO  [08c0bb38] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (27 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:25.606 INFO  [cb3d30ab] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:25.782 INFO  [363a00f9] com.RentalHub.Service.AuthService - AUDIT login success email=rahul@gmail.com role=VENDOR
+2026-10-18 18:54:25.784 INFO  [363a00f9] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 200 (171 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:25.919 INFO  [197b1f6b] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (5 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:25.968 INFO  [51db9502] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (39 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:33.922 INFO  [fcd7fe41] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:33.972 INFO  [3e5d5db3] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (40 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:55.920 INFO  [e9b0accf] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (3 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:54:55.970 INFO  [758ae22a] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (38 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:04.184 INFO  [504c4b48] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment/6 -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:04.241 INFO  [adf1ed6e] c.R.logging.RequestLoggingFilter - GET /api/equipment/6 -> 200 (39 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:15.089 INFO  [f4398fc9] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:15.264 INFO  [0908f4da] c.RentalHub.Service.BookingService - AUDIT booking created id=2 item=The Party Round Arch Balloon Stand qty=1 days=1 total=150.00 by=rahul@gmail.com
+2026-10-18 18:55:15.279 INFO  [0908f4da] c.R.logging.RequestLoggingFilter - POST /api/bookings -> 201 (187 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:15.379 INFO  [c3496531] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings/2 -> 200 (3 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:15.454 INFO  [38eb63f8] c.R.logging.RequestLoggingFilter - GET /api/bookings/2 -> 200 (42 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:16.983 INFO  [72b1a341] c.R.logging.RequestLoggingFilter - OPTIONS /api/payments/booking/2/initiate -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:16.998 WARN  [7c29d9cd] c.R.logging.RequestLoggingFilter - POST /api/payments/booking/2/initiate -> 403 (11 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:19.782 WARN  [8093dee9] c.R.logging.RequestLoggingFilter - POST /api/payments/booking/2/initiate -> 403 (1 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:21.322 INFO  [a304685c] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:21.366 INFO  [6784bcbb] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (35 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:28.840 INFO  [246406ae] c.R.logging.RequestLoggingFilter - OPTIONS /api/auth/login -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:29.019 INFO  [08c44546] com.RentalHub.Service.AuthService - AUDIT login success email=muhammedshabeelk11@gmail.com role=CUSTOMER
+2026-10-18 18:55:29.035 INFO  [08c44546] c.R.logging.RequestLoggingFilter - POST /api/auth/login -> 200 (187 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:29.104 INFO  [41bc55dd] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:29.192 INFO  [4cad805b] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (51 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:32.671 INFO  [1fac88db] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment/2 -> 200 (10 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:32.734 INFO  [0f60319d] c.R.logging.RequestLoggingFilter - GET /api/equipment/2 -> 200 (29 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:39.221 INFO  [59405d15] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:39.244 INFO  [99d1276e] c.RentalHub.Service.BookingService - AUDIT booking created id=3 item=Round Table qty=1 days=1 total=60.00 by=muhammedshabeelk11@gmail.com
+2026-10-18 18:55:39.252 INFO  [99d1276e] c.R.logging.RequestLoggingFilter - POST /api/bookings -> 201 (31 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:39.318 INFO  [bcd2cca8] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings/3 -> 200 (3 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:39.383 INFO  [ed9bacac] c.R.logging.RequestLoggingFilter - GET /api/bookings/3 -> 200 (34 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:40.536 INFO  [ba43645e] c.R.logging.RequestLoggingFilter - OPTIONS /api/payments/booking/3/initiate -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:40.560 INFO  [3f94616e] c.R.Payment.MockPaymentGateway - MOCK gateway order created id=order_b7abdc6162f64a amount=60.00 receipt=booking-3
+2026-10-18 18:55:40.569 INFO  [3f94616e] c.RentalHub.Service.PaymentService - AUDIT payment initiated booking=3 order=order_b7abdc6162f64a amount=60.00 by=muhammedshabeelk11@gmail.com
+2026-10-18 18:55:40.630 INFO  [3f94616e] c.R.logging.RequestLoggingFilter - POST /api/payments/booking/3/initiate -> 200 (83 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:41.551 INFO  [68340b76] c.R.logging.RequestLoggingFilter - OPTIONS /api/payments/verify -> 200 (2 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:41.605 INFO  [3e87bf42] c.RentalHub.Service.PaymentService - AUDIT payment PAID booking=3 payment=pay_k94q84lryj amount=60.00 by=muhammedshabeelk11@gmail.com
+2026-10-18 18:55:41.630 INFO  [3e87bf42] c.R.logging.RequestLoggingFilter - POST /api/payments/verify -> 200 (73 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:44.378 INFO  [359cebdd] c.R.logging.RequestLoggingFilter - OPTIONS /api/bookings -> 200 (4 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 18:55:44.462 INFO  [f84c8277] c.R.logging.RequestLoggingFilter - GET /api/bookings -> 200 (67 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 21:01:46.196 WARN  [system] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m4s396ms85µs700ns).
+2026-10-18 22:19:05.749 INFO  [129fc50a] c.R.logging.RequestLoggingFilter - OPTIONS /api/equipment -> 200 (0 ms) user=anonymous ip=0:0:0:0:0:0:0:1
+2026-10-18 22:19:05.789 INFO  [0566cc6a] c.R.logging.RequestLoggingFilter - GET /api/equipment -> 200 (40 ms) user=anonymous ip=0:0:0:0:0:0:0:1

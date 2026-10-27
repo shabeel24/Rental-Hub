@@ -1,0 +1,5 @@
+package com.RentalHub.dto;
+
+public record BookingRequest() {
+
+}

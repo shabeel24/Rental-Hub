@@ -1,0 +1,112 @@
+<section class="page wrap">
+  <div class="top">
+    <div>
+      <h1 class="display">Admin</h1>
+      <p class="lede">{{ items().length }} items ({{ active() }} live) · {{ bookings().length }} bookings @if (pendingVendors()) { · {{ pendingVendors() }} vendor waiting for approval }</p>
+    </div>
+    @if (tab() === 'items') { <button class="btn btn-dark" (click)="newItem()">Add an item</button> }
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" [class.on]="tab() === 'items'" (click)="tab.set('items')">Items</button>
+    <button role="tab" [class.on]="tab() === 'bookings'" (click)="tab.set('bookings')">Bookings</button>
+    <button role="tab" [class.on]="tab() === 'users'" (click)="tab.set('users')">People</button>
+  </div>
+
+  @if (error()) { <p class="err" role="alert">{{ error() }}</p> }
+  @if (msg()) { <p class="ok" role="status">{{ msg() }}</p> }
+
+  @switch (tab()) {
+    @case ('items') {
+      <div class="scroll-x"><table class="table">
+        <thead><tr><th>Item</th><th>Category</th><th class="r">Per day</th><th class="r">Deposit</th><th class="r">Stock</th><th>Status</th><th class="r">Actions</th></tr></thead>
+        <tbody>
+          @for (i of items(); track i.id) {
+            <tr>
+              <td><strong class="nm">{{ i.name }}</strong><br><span class="small">{{ i.description }}</span></td>
+              <td>{{ i.category }}</td>
+              <td class="r num">{{ rupees(i.pricePerDay) }}</td><td class="r num">{{ rupees(i.depositAmount) }}</td><td class="r num">{{ i.totalStock }}</td>
+              <td><span class="tag" [class.good]="i.active" [class.bad]="!i.active">{{ i.active ? 'Live' : 'Removed' }}</span></td>
+              <td class="r acts">
+                <button class="btn btn-line btn-sm" (click)="edit(i)">Edit</button>
+                @if (i.active) { <button class="btn btn-line btn-danger btn-sm" (click)="remove(i)">Remove</button> }
+                @else { <button class="btn btn-dark btn-sm" (click)="restore(i)">Restore</button> }
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table></div>
+    }
+    @case ('bookings') {
+      @if (!bookings().length) { <div class="empty"><strong>No bookings yet</strong>They will appear here when customers reserve equipment.</div> }
+      @else {
+      <div class="scroll-x"><table class="table">
+        <thead><tr><th>#</th><th>Customer</th><th>Item</th><th>Dates</th><th class="r">Total</th><th>Status</th><th class="r">Next step</th></tr></thead>
+        <tbody>
+          @for (b of bookings(); track b.id) {
+            <tr>
+              <td>{{ b.id }}</td>
+              <td>{{ b.customerEmail }}</td>
+              <td>{{ b.equipmentName || ('#' + b.equipmentId) }} × {{ b.quantity }}</td>
+              <td class="small">{{ b.startDate }}<br>{{ b.endDate }}</td>
+              <td class="r num">{{ rupees(b.totalAmount) }}</td>
+              <td><span class="tag" [class]="'tag ' + tagClass(b.status)">{{ b.status.replace('_', ' ').toLowerCase() }}</span></td>
+              <td class="r acts">
+                @if (next[b.status]; as n) { <button class="btn btn-dark btn-sm" (click)="advance(b)">{{ n.label }}</button> }
+                @if (b.status === 'RETURNED') { <button class="btn btn-dark btn-sm" (click)="openSettle(b)">Settle deposit</button> }
+              </td>
+            </tr>
+            @if (settling() === b.id) {
+              <tr class="settle"><td colspan="7">
+                <form [formGroup]="settleForm" (ngSubmit)="settle(b)">
+                  <p class="small">Deposit held: <b>{{ rupees(b.depositAmount) }}</b>. Enter an amount to deduct for damage, or leave 0 to refund it all.</p>
+                  <div class="srow">
+                    <label class="field"><span>Deduction (₹)</span><input class="input" type="number" min="0" [max]="b.depositAmount" formControlName="deduction"></label>
+                    <label class="field grow"><span>Reason (required if deducting)</span><input class="input" formControlName="reason"></label>
+                    <button class="btn btn-dark">Settle and close</button>
+                    <button type="button" class="btn btn-line" (click)="settling.set(null)">Cancel</button>
+                  </div>
+                </form>
+              </td></tr>
+            }
+          }
+        </tbody>
+      </table></div>
+      }
+    }
+    @case ('users') {
+      <div class="scroll-x"><table class="table">
+        <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th class="r">Action</th></tr></thead>
+        <tbody>
+          @for (u of users(); track u.id) {
+            <tr>
+              <td>{{ u.fullName }}</td><td>{{ u.email }}</td><td>{{ u.role.toLowerCase() }}</td>
+              <td><span class="tag" [class.good]="u.enabled" [class.wait]="!u.enabled">{{ u.enabled ? 'Active' : 'Waiting for approval' }}</span></td>
+              <td class="r">@if (u.role === 'VENDOR' && !u.enabled) { <button class="btn btn-dark btn-sm" (click)="approve(u)">Approve vendor</button> }</td>
+            </tr>
+          }
+        </tbody>
+      </table></div>
+    }
+  }
+</section>
+
+@if (editing()) {
+  <div class="scrim" (click)="editing.set(false)"></div>
+  <aside class="drawer" role="dialog" aria-label="Item details">
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <h2 class="title sm">{{ form.value.id ? 'Edit item' : 'Add an item' }}</h2>
+      <label class="field"><span>Name</span><input class="input" formControlName="name"></label>
+      <label class="field"><span>Description</span><textarea class="input" formControlName="description"></textarea></label>
+      <label class="field"><span>Category</span><input class="input" formControlName="category" placeholder="Furniture, Tents, Sound, Lighting"></label>
+      <div class="two">
+        <label class="field"><span>Price per day (₹)</span><input class="input" type="number" min="0" formControlName="pricePerDay"></label>
+        <label class="field"><span>Deposit (₹)</span><input class="input" type="number" min="0" formControlName="depositAmount"></label>
+      </div>
+      <label class="field"><span>Total stock</span><input class="input" type="number" min="0" formControlName="totalStock"></label>
+      <label class="check"><input type="checkbox" formControlName="active"> Show in the catalogue</label>
+      @if (error()) { <p class="err">{{ error() }}</p> }
+      <div class="btns"><button class="btn btn-dark">Save item</button><button type="button" class="btn btn-line" (click)="editing.set(false)">Cancel</button></div>
+    </form>
+  </aside>
+}
